@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/janis/projects/audio-dsp-engine/build",
+  "command": "/usr/bin/g++  -I/home/janis/projects/audio-dsp-engine/external/dr_wav -g -std=c++23 -o CMakeFiles/dr_wav.dir/external/dr_wav/dr_wav.cpp.o -c /home/janis/projects/audio-dsp-engine/external/dr_wav/dr_wav.cpp",
+  "file": "/home/janis/projects/audio-dsp-engine/external/dr_wav/dr_wav.cpp",
+  "output": "CMakeFiles/dr_wav.dir/external/dr_wav/dr_wav.cpp.o"
+},
+{
+  "directory": "/home/janis/projects/audio-dsp-engine/build",
+  "command": "/usr/bin/g++  -I/home/janis/projects/audio-dsp-engine/include -I/home/janis/projects/audio-dsp-engine/external/dr_wav -g -std=c++23 -Wall -Wextra -Wpedantic -Wconversion -o CMakeFiles/audio-dsp-engine.dir/src/main.cpp.o -c /home/janis/projects/audio-dsp-engine/src/main.cpp",
+  "file": "/home/janis/projects/audio-dsp-engine/src/main.cpp",
+  "output": "CMakeFiles/audio-dsp-engine.dir/src/main.cpp.o"
+}
+]
