@@ -1,8 +1,0 @@
-/home/janis/projects/audio-dsp-engine/build/CMakeFiles/dr_wav.dir
-/home/janis/projects/audio-dsp-engine/build/CMakeFiles/audio-dsp-engine.dir
-/home/janis/projects/audio-dsp-engine/build/CMakeFiles/test.dir
-/home/janis/projects/audio-dsp-engine/build/CMakeFiles/edit_cache.dir
-/home/janis/projects/audio-dsp-engine/build/CMakeFiles/rebuild_cache.dir
-/home/janis/projects/audio-dsp-engine/build/src/CMakeFiles/test.dir
-/home/janis/projects/audio-dsp-engine/build/src/CMakeFiles/edit_cache.dir
-/home/janis/projects/audio-dsp-engine/build/src/CMakeFiles/rebuild_cache.dir

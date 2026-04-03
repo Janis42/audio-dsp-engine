@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdr_wav.a CMakeFiles/dr_wav.dir/external/dr_wav/dr_wav.cpp.o
-/usr/bin/ranlib libdr_wav.a

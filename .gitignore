@@ -1,1 +1,3 @@
-soundfiles/
+.vscode/
+/soundfiles/
+/build/
