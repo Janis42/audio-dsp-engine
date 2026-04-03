@@ -15,12 +15,14 @@ int main(int argc, char* argv[]){
     if (mode=="playground"){
         // some dummy code to test functionalities
         try {
-            WavData dataobj {"../soundfiles/wavTest.wav"};
+            WavData dataobj {"soundfiles/wavTest.wav"};
             cout << "File successfully loaded\n";
             dataobj.printInfo();
 
-            // saving a copy file
-            dataobj.saveWav("../soundfiles/output1.wav");
+            Biquad filter("lpf", dataobj.getFormat().sampleRate, 200.0, 0.707);
+            dataobj.applyFilter(filter);
+            // saving the modified file
+            dataobj.saveWav("soundfiles/output_lowpass2.wav");
         }
 
         catch (const std::runtime_error& err) {

@@ -5,9 +5,11 @@
 #include <iostream>
 using std::cout;
 
+class RecursiveFilter;
+
 class WavData{
 private:
-    float* m_pSampleData;
+    double* m_pSampleData;
     drwav_data_format m_format;
     drwav_uint64 m_totalPCMFrameCount;
 
@@ -23,13 +25,13 @@ public:
 
     ~WavData();
 
+    drwav_data_format getFormat();
+
     bool saveWav(const char* path);
 
-    void printInfo(){
-        cout << "WavData Object Info: [channels, sampleRate, totalPCMFrameCount] = [";
-        cout << m_format.channels << ", " << m_format.sampleRate << ", " << m_totalPCMFrameCount << "]\n";
-    }
-    
+    void printInfo();
+
+    void applyFilter(RecursiveFilter& filter);
 };
 
 #endif
