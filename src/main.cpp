@@ -1,6 +1,7 @@
 #include "dr_wav.h"
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <timer.h>
 #include <dsp_algs.h>
 #include <wav_data.h>
@@ -40,6 +41,23 @@ int main(int argc, char* argv[]){
     
     // only here for some preliminary tests
     if (mode=="heatcpu"){
+        Timer t {};
+
+        for (std::size_t s : {1, 2, 4, 8, 16, 32, 64, 128}){
+            //t.reset();
+            //superScalarTest(s, 10'000'000);
+            //cout << "\nsuperScalar s = " << s << ": " << t.elapsed() << std::endl;
+
+            t.reset();
+            threadedTest(s, 1'000'000'000);
+            cout << "\nthreaded   s = " << s << ": " << t.elapsed() << std::endl;
+
+            t.reset();
+            combinedTest(s, std::min(s, std::size_t{16}), 1'000'000'000);
+            cout << "\ncombined   s = " << s << ": " << t.elapsed() << std::endl;
+        }
+        
+        
         cout << "Started heat CPU mode, 0 stops the program. \n";
         heatCPU();
     }

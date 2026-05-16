@@ -91,10 +91,10 @@ void WavData::printInfo() {
     }
 
 void WavData::applyFilter(RecursiveFilter& filter) {
-    int channels {m_format.channels};
-    for (int c {0}; c<channels; c++){
+    drwav_uint64 channels {m_format.channels};
+    for (drwav_uint64 c {0}; c<channels; c++){
         filter.reset();
-        for (int i {0}; i<m_totalPCMFrameCount; i++){
+        for (drwav_uint64 i {0}; i<m_totalPCMFrameCount; i++){
             // indexing starts at 1 to simplify computation
             int ind {c+channels*i};
             m_pSampleData[ind] = filter.process(m_pSampleData[ind]);

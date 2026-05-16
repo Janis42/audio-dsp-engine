@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 23)             # Use C++23 (change to 20 if you prefer)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)    # Enforce that standard
 set(CMAKE_CXX_EXTENSIONS OFF)          # Disable compiler-specific extensions
 
+find_package(OpenMP REQUIRED)
+
 add_executable(audio-dsp-engine src/main.cpp) # Define the executable target
 enable_testing() # Currently unused
 
@@ -26,5 +28,5 @@ target_include_directories(dr_wav PUBLIC external/dr_wav) # Include dr_wav heade
 add_subdirectory(src)
 add_subdirectory(tests)
 
-target_link_libraries(audio-dsp-engine PRIVATE dr_wav) # Link dr_wav to the app target
+target_link_libraries(audio-dsp-engine PRIVATE dr_wav OpenMP::OpenMP_CXX) # Link dependencies to the app target
 
